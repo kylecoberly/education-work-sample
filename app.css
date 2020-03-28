@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:400,700|Open+Sans:400,400i,600&display=swap");
+
+/* Variables */
+:root {
+  --small-breakpoint: 900px;
+
+  --gray-1: hsl(210, 20%, 10%);
+  --gray-3: hsl(210, 10%, 20%);
+  --gray-5: hsl(210, 10%, 35%);
+  --gray-7: hsl(210, 10%, 50%);
+  --gray-9: hsl(210, 10%, 95%);
+
+  /* Scale */
+  --xxs: 4px;
+  --xs: 8px;
+  --small: 12px;
+  --baseline: 16px;
+  --large: 24px;
+  --xl: 32px;
+  --xxl: 48px;
+  --xxxl: 64px;
+  --xxxxl: 96px;
+  --xxxxxl: 128px;
+  --xxxxxxl: 192px;
+  --xxxxxxxl: 256px;
+  --xxxxxxxxl: 384px;
+  --xxxxxxxxxl: 512px;
+
+  /* Type */
+  --font-xs: 12px;
+  --font-small: 14px;
+  --font-baseline: 16px;
+  --font-large: 18px;
+  --font-xl: 20px;
+  --font-xxl: 24px;
+  --font-xxxl: 30px;
+  --font-xxxxl: 36px;
+  --font-xxxxxl: 48px;
+  --font-xxxxxxl: 60px;
+  --font-xxxxxxxl: 72px;
+}
+
+/* Resets */
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--font-xxxxxxxl);
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-bottom: var(--xxs);
+  text-rendering: optimizeLegibility;
+}
+
+h1 + p {
+  margin-left: 3px; /* Visual alignment */
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: var(--font-xxl);
+}
+
+h2 {
+  font-size: var(--font-xxxxl);
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: var(--large);
+  margin-bottom: var(--baseline);
+}
+
+h3 {
+  font-size: var(--font-xxl);
+  color: var(--gray-1);
+  margin-bottom: var(--baseline);
+}
+
+nav {
+  margin-left: 3px; /* Visual alignment */
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-baseline);
+  color: var(--gray-1);
+}
+
+li, p {
+  margin-bottom: var(--baseline);
+  color: var(--gray-5);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+b {
+  font-weight: 700;
+}
+
+cite {
+  font-style: italic;
+}
+
+pre, code {
+  font-family: monospace;
+  background-color: var(--gray-9);
+}
+
+code {
+  padding: var(--xxs);
+}
+
+pre {
+  padding: var(--xxl);
+  white-space: pre-wrap;
+}
+
+@media screen and (max-width: 900px){
+  body {
+    font-size: var(--font-small);
+  }
+  h1 {
+    font-size: var(--font-xxxxxl);
+  }
+  h1 + p {
+    font-size: var(--font-xl);
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: var(--font-xxl);
+  }
+  h3 {
+    font-size: var(--font-large);
+  }
+  section {
+    margin-bottom: var(--xl);
+  }
+}
+
+/* Lists */
+li {
+  margin-left: var(--xl);
+}
+
+li + li {
+  margin-left: var(--xl);
+}
+
+ul li {
+  list-style: disc;
+}
+
+ul li li {
+  list-style: circle;
+}
+
+ol li {
+  list-style: lower-alpha;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 0;
+}
+
+
+/* Layout */
+body {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+main, header {
+  width: 900px;
+}
+
+main {
+  padding: 0 var(--xxxxxl);
+}
+
+header {
+  padding: var(--xxxxl) var(--xxxxxl) 0 var(--xxxxxl);
+  margin-bottom: var(--xxxl);
+}
+
+@media (max-width: 900px) {
+  main, header {
+    width: 100%;
+    padding: var(--baseline) var(--baseline);
+  }
+  header {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+main > section {
+  margin-bottom: var(--xxxxxl);
+}
+
+/* Video */
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
+}
+
+.video-notes li {
+  list-style: none;
+  margin-left: 0;
+}
+
+/* Image thumbnails */
+.thumbnails {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.thumbnails li {
+  list-style: none;
+  margin: 0;
+}
+
+.thumbnails img {
+  max-width: var(--xxxxxxl);
+  border: 1px solid var(--gray-9);
+}
+
+/* Additional questions */
+#additional-questions > ul > li {
+  list-style: none;
+  margin-left: 0;
+}
+
+#additional-questions ol {
+  margin-top: var(--baseline);
+}
+
+#additional-questions ol li {
+  list-style: decimal;
+}
