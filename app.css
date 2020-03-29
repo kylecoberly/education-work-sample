@@ -61,7 +61,7 @@ h1 + p {
 }
 
 h2 {
-  font-size: var(--font-xxxxl);
+  font-size: var(--font-xxxxxl);
   text-transform: uppercase;
   font-family: 'Open Sans Condensed', sans-serif;
   margin-top: var(--large);
