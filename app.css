@@ -72,6 +72,7 @@ h3 {
   font-size: var(--font-xxl);
   color: var(--gray-1);
   margin-bottom: var(--baseline);
+  margin-top: var(--xxl);
 }
 
 nav {
